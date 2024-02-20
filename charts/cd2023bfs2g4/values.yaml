@@ -6,7 +6,7 @@ image:
   pullPolicy: IfNotPresent
   ## provided as basic setup. replace as needed
   repository: ghcr.io/campusdual/2023-bfs-2-g4_fantasyf1
-  version: procb5e743
+  version: proa36e36b
 imagePullSecrets: 
   - name: "github-ecr-cred" 
 nameOverride: ""
