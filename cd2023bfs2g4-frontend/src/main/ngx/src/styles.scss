@@ -1,40 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
-.o-form-layout-manager {
-  .o-form {
-    form {
-      height: 100%;
-    }
-  }
+.biggerInput {
+    text-align: center;
+    font-size: 14pt;
 }
 
-/* Form toolbar background color */
-.o-form-toolbar .o-form-toolbar-header.mat-toolbar {
-  background-color: transparent;
+.title {
+    text-align: center;
+}
+
+.hideGraph {
+    display: none;
 }
 
 
-.o-column > div.o-container .o-container-scroll.o-container-gap,
-.o-row > div.o-container .o-container-scroll.o-container-gap {
-  padding: 15px;
+
+/*Edit team section*/
+#UC_AVAILABLE_MONEY {
+    text-align: right;
 }
 
-.avatar.o-image {
-  width: 200px;
-  height: 200px;
+.mat-form-field.icon-field .mat-form-field-suffix .svg-icon>svg {
+    padding-top: 0rem;
+    padding-bottom: 0.3rem;
+}
 
-  .o-image-content.o-image-auto-fit {
-    .o-image-display-container {
-      img {
-        border-radius: 50%;
-        aspect-ratio: auto 200/200;
-        width: 200px;
-        height: 200px;
-      }
-    }
+#COMP_NAME,
+#UC_AVAILABLE_MONEY {
+    height: 1.5rem;
+}
 
-    .o-image-form-field {
-      position: absolute;
-      bottom: -42px;
+#edit_team_header {
+    height: 110px;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fff1f1;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+th {
+    background-color: #da3930 !important;
+    color: white !important;
+    color: #fff;
+}
+
+tbody tr:hover {
+    font-weight: bolder;
+    background-color: #ffe3e3 !important;
+    color: white !important;
+}
+
+
+
+// New row response style
+tbody tr {
+    transition: transform 0.1s;
+    cursor: pointer;
+
+    &:hover {
+        td {
+            @keyframes scaleUp {
+                to {
+                    transform: scale(1.07);
+                    color: black;
+                }
+            }
+            animation: scaleUp 0.2s forwards;
+        }
     }
-  }
+}
+
+button.mat-raised-button:hover {
+    color: #eee7e8;
+    background-color: black;
+    font-weight: bold;
+}
+
+
+
+//New button response style
+.o-button button {
+    transform: scale(1);
+    transition: transform 0.15s ease-out;
+}
+
+.o-button button:hover {
+    transform: scale(1.05);
+
+}
+
+.o-button button:active {
+    transform: scale(0.95);
 }

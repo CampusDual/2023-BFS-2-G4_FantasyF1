@@ -1,0 +1,11 @@
+<ng-template #templateref let-cellvalue="cellvalue" let-rowvalue="rowvalue">
+    <span *ngIf="cellvalue < 0" style="color:red;">
+        <p>{{ getCellData(cellvalue) }}<mat-icon>arrow_drop_down</mat-icon></p>
+    </span>  
+    <span *ngIf="cellvalue > 0" style="color:green">
+        <p>{{ getCellData(cellvalue) }}<mat-icon>arrow_drop_up</mat-icon><p>
+    </span>
+    <span *ngIf="cellvalue == 0" style="color:grey">
+        <p>{{ getCellData(cellvalue) }}<mat-icon>arrow_drop_right</mat-icon></p>
+    </span>
+</ng-template>

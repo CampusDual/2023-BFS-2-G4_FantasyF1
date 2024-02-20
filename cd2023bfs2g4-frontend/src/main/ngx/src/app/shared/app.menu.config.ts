@@ -1,13 +1,8 @@
 import { MenuRootItem } from 'ontimize-web-ngx';
 
 export const MENU_CONFIG: MenuRootItem[] = [
-  { id: 'home', name: 'HOME', icon: 'home', route: '/main/home' },
-  {
-    id: 'admin', name: 'ADMIN', tooltip: 'ADMIN', icon: 'admin_panel_settings',
-    items: [
-      { id: 'roles', name: 'ROLES', tooltip: 'ROLES', route: '/main/admin/roles', icon: 'supervisor_account' },
-      { id: 'users', name: 'USERS', tooltip: 'USERS', route: '/main/admin/users', icon: 'person' },
-    ]
-  },
+  { id: 'home', name: 'COMP_USER_TITLE', icon: 'emoji_events', route: '/main/home' },
+  { id: 'available', name: 'COMP_AVAILABLE_MENU', icon: 'search', route: '/main/competitions/available' },
+  { id: 'pilots', name: 'PILOTS', icon: 'groups', route: '/main/drivers' },
   { id: 'logout', name: 'LOGOUT', route: '/login', icon: 'power_settings_new', confirm: 'yes' }
 ];

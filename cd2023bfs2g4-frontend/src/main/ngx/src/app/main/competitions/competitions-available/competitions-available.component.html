@@ -1,0 +1,19 @@
+<o-column fxLayout>
+  <h2 class=title>{{"COMP_AVAILABLE_TITLE" | oTranslate}}</h2>
+  <o-row>
+    <o-button attr="raised4" type="RAISED" label="SEARCH_PRIVATE_LEAGUE" layout-padding color="primary" mat-button
+      (click)="openDialog()" layout-padding icon="search" icon-position="left"></o-button>
+  </o-row>
+</o-column>
+<o-column fxLayout fxLayoutAlign="start">
+  <o-row>
+    <o-table title="COMP_ALL_TITLE" show-title="false" attr="allCompetitionsTable" service="competitions"
+      entity="publicCountCompetition" keys="COMP_ID" key="COMP_ID" auto-adjust="false" virtual-scroll="no"
+      columns="COMP_ID;COMP_NAME;COMP_ISPUBLIC;COMP_DESCRIPTION;NUM_USERS;COMPLETE"
+      visible-columns="COMP_NAME;COMP_DESCRIPTION;NUM_USERS" query-rows="20" insert-button="no" delete-button="no">
+      <o-table-column attr="COMP_NAME" title="COMP_NAME" content-align="center"></o-table-column>
+      <o-table-column attr="COMP_DESCRIPTION" title="COMP_DESCRIPTION" content-align="center"></o-table-column>
+      <o-table-column attr="NUM_USERS" title="NUM_USERS" content-align="center"></o-table-column>
+    </o-table>
+  </o-row>
+</o-column>

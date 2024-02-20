@@ -22,7 +22,7 @@
     overflow: auto;
 
     .login-bg-container {
-      background-image: url('^assets/images/login_bg.png');
+      background-image: url('^assets/images/login_bg.jpg');
       width: calc(100% - 640px);
       background-repeat: no-repeat;
       background-size: cover;
@@ -58,12 +58,12 @@
         }
 
         .logo-container {
-          width: 368px;
-          height: 110px;
+          width: 400px;
+          height: 200px;
 
           img {
-            max-height: 110px;
-            max-width: 368px;
+            max-height: 200px;
+            max-width: 400px;
           }
         }
 
@@ -127,6 +127,7 @@
   }
 
 }
+
 @media(max-width:576px) {
   .full-page {
     .login-outer-container {
