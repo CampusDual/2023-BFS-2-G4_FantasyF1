@@ -9,14 +9,14 @@ import { OFormComponent, OTableComponent } from 'ontimize-web-ngx';
 })
 export class CompetitionsTeamEditComponent implements OnInit {
 
-  @ViewChild('table_team_edit', {static:true}) table_team_edit: OTableComponent;
-  @ViewChild('form_team_edit', {static:true}) form_team_edit: OFormComponent;
+  @ViewChild('table_team_edit', { static: true }) table_team_edit: OTableComponent;
+  @ViewChild('form_team_edit', { static: true }) form_team_edit: OFormComponent;
   constructor(public parentService: CompetitionData) { }
-  
+
   ngOnInit() {
     this.parentService.dataUpdated$.subscribe(() => {
       this.reloadTableAndForm();
-      });
+    });
   }
 
   reloadTableAndForm() {
@@ -24,19 +24,19 @@ export class CompetitionsTeamEditComponent implements OnInit {
     this.form_team_edit.reload(true);
   }
 
-  loadDataForm(data){
+  loadDataForm(data) {
     this.parentService.setCompId(data.COMP_ID)
     this.parentService.setMoneyUser(data.UC_AVAILABLE_MONEY);
     this.parentService.setUcId(data.UC_ID);
   }
 
-  loadTableData(data){
-   
+  loadTableData(data) {
+
     let counter_pilots: number = 0;
-    let sessionData = localStorage.getItem("com.ontimize.web.ngx.jee.seed");
+    let sessionData = localStorage.getItem("com.campusdual.cd2023bfs2g4");
     let username = JSON.parse(sessionData).session["user"];
-    for(let user of data){
-      if(user.USER_===username){
+    for (let user of data) {
+      if (user.USER_ === username) {
         counter_pilots++;
       }
     }

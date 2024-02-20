@@ -16,9 +16,9 @@ export class CompetitionsEditTypeColumnRendererComponent extends OBaseTableCellR
   username: string = "";
 
   constructor(
-    protected injector2: Injector, 
+    protected injector2: Injector,
     protected injector: Injector,
-    public childService: CompetitionData, 
+    public childService: CompetitionData,
     private router: Router,
     protected snackService: SnackBarService,
     protected dialogService: DialogService,
@@ -30,7 +30,7 @@ export class CompetitionsEditTypeColumnRendererComponent extends OBaseTableCellR
   }
 
   ngOnInit() {
-    let sessionData = localStorage.getItem("com.ontimize.web.ngx.jee.seed");
+    let sessionData = localStorage.getItem("com.campusdual.cd2023bfs2g4");
     this.username = JSON.parse(sessionData).session["user"];
 
     this.configureService();
@@ -79,22 +79,22 @@ export class CompetitionsEditTypeColumnRendererComponent extends OBaseTableCellR
       })
   }
 
-  showSellConfirm(evt: any, ucpId, pilId){
-    if(this.dialogService){
+  showSellConfirm(evt: any, ucpId, pilId) {
+    if (this.dialogService) {
       this.dialogService.confirm(this.translator.get('CONFIRM_SELL'), this.translator.get('WANT_SELL'));
       this.dialogService.dialogRef.afterClosed().subscribe(result => {
-        if(result){
+        if (result) {
           this.sellDriver(ucpId, pilId);
         }
       })
     }
   }
 
-  showBuyConfirm(evt: any, pilId, pilPrice){
-    if(this.dialogService){
+  showBuyConfirm(evt: any, pilId, pilPrice) {
+    if (this.dialogService) {
       this.dialogService.confirm(this.translator.get('CONFIRM_BUY'), this.translator.get('WANT_BUY'));
       this.dialogService.dialogRef.afterClosed().subscribe(result => {
-        if(result){
+        if (result) {
           this.buyDriver(pilId, pilPrice);
         }
       })

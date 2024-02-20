@@ -16,7 +16,7 @@ export class CompetitionsDetailRendererComponent extends OBaseTableCellRenderer 
   }
 
   ngOnInit() {
-    let sessionData = localStorage.getItem("com.ontimize.web.ngx.jee.seed");
+    let sessionData = localStorage.getItem("com.campusdual.cd2023bfs2g4");
     this.username = JSON.parse(sessionData).session["user"];
   }
 

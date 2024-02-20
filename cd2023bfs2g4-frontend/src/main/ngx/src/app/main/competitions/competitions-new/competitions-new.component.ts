@@ -43,7 +43,7 @@ export class CompetitionsNewComponent implements OnInit {
 
   asignarVar(): string {
     const date = new Date();
-    let sessionData = localStorage.getItem("com.ontimize.web.ngx.jee.seed");
+    let sessionData = localStorage.getItem("com.campusdual.cd2023bfs2g4");
     let sessionUser = JSON.parse(sessionData).session["user"];
     let numRandom = Math.floor(Math.random() * (10000 - 0 + 1)) + 0;
     let fecha: string = `${date.getHours()}${date.getMinutes()}${date.getSeconds()}${numRandom}${date.getDate()}${date.getMonth()}${date.getFullYear()}`
